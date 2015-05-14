@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1FF77E0D1B0398E30043AAF9 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FF77E0C1B0398E30043AAF9 /* MessageUI.framework */; };
 		B4FA62881B015D0500C9016C /* offWhiteGradientBG.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B4FA62871B015D0500C9016C /* offWhiteGradientBG.jpg */; };
 		B4FA628A1B015D6B00C9016C /* lightReadGradient.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = B4FA62891B015D6B00C9016C /* lightReadGradient.jpeg */; };
 		B4FA628C1B01621400C9016C /* TutorialVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B4FA628B1B01621400C9016C /* TutorialVC.m */; };
@@ -48,6 +49,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1FF77E0C1B0398E30043AAF9 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		B4FA62871B015D0500C9016C /* offWhiteGradientBG.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = offWhiteGradientBG.jpg; sourceTree = "<group>"; };
 		B4FA62891B015D6B00C9016C /* lightReadGradient.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = lightReadGradient.jpeg; sourceTree = "<group>"; };
 		B4FA628B1B01621400C9016C /* TutorialVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TutorialVC.m; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1FF77E0D1B0398E30043AAF9 /* MessageUI.framework in Frameworks */,
 				ECAD34481B00FC3500F1A6C4 /* UIKit.framework in Frameworks */,
 				EC8B26111B00F49A00D7A54A /* Foundation.framework in Frameworks */,
 				EC3FABE61AF4173B00CCAC34 /* CoreLocation.framework in Frameworks */,
@@ -122,6 +125,7 @@
 		ECDDA1F01AF3C1110051B734 = {
 			isa = PBXGroup;
 			children = (
+				1FF77E0C1B0398E30043AAF9 /* MessageUI.framework */,
 				B4FA62871B015D0500C9016C /* offWhiteGradientBG.jpg */,
 				ECAD34471B00FC3500F1A6C4 /* UIKit.framework */,
 				EC8B26101B00F49A00D7A54A /* Foundation.framework */,

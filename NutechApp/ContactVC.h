@@ -7,7 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MessageUI/MessageUI.h>
 
-@interface ContactVC : UIViewController
 
+@interface ContactVC : UIViewController<MFMailComposeViewControllerDelegate>
+@property (weak, nonatomic) IBOutlet UITextField *nameTF;
+@property (weak, nonatomic) IBOutlet UITextField *emailTF;
+@property (weak, nonatomic) IBOutlet UITextField *subjectTF;
+@property (weak, nonatomic) IBOutlet UITextView *messageTextView;
+@property (weak, nonatomic) IBOutlet UISwitch *sendToYourSelf;
+
+@property (weak, nonatomic) IBOutlet UIButton *sendButton;
+- (IBAction)sendEmail:(id)sender;
 @end
