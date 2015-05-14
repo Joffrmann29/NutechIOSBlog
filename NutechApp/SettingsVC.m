@@ -26,8 +26,6 @@
     }else {
         [_flagSwitch setOn:NO animated:YES];
     }
-
-    
 }
 
 
