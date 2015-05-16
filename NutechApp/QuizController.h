@@ -7,7 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Parse/Parse.h>
 
 @interface QuizController : UIViewController
+
+@property (strong, nonatomic) IBOutlet UITextView *questionTextView;
+@property (strong, nonatomic) IBOutlet UITextView *answerTextView;
+@property (strong, nonatomic) IBOutlet UITextView *explanationTextView;
+
+@property (strong,nonatomic)PFObject *quizObject;
+@property(strong,nonatomic)NSArray *quizItems;
+@property(nonatomic)int index;
 
 @end

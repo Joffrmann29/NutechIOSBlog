@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="V7N-y3-FyT">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="V7N-y3-FyT">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
     </dependencies>
@@ -108,7 +108,7 @@
                                 <connections>
                                     <action selector="contentBtn:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="tRi-Mb-c1J"/>
                                     <action selector="quizBtn:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="HOh-vM-Xjc"/>
-                                    <segue destination="oMA-b5-Jjc" kind="show" id="2tO-6L-D90"/>
+                                    <segue destination="vfS-zq-mCo" kind="show" id="0Z1-fF-lf3"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -477,6 +477,80 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uA6-xm-E2R" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-4825.5" y="944.5"/>
+        </scene>
+        <!--Quiz Controller-->
+        <scene sceneID="OrO-Xb-YDz">
+            <objects>
+                <viewController id="vfS-zq-mCo" customClass="QuizController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gcZ-0c-nMN"/>
+                        <viewControllerLayoutGuide type="bottom" id="xEE-Cc-DO9"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="WXR-HW-JNJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="offWhiteGradientBG.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="M7d-3L-fFK">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Explanation" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FFH-A3-g9n">
+                                <rect key="frame" x="106" y="390" width="188" height="55"/>
+                                <fontDescription key="fontDescription" name="Kailasa-Bold" family="Kailasa" pointSize="33"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c4o-Eq-jFg">
+                                <rect key="frame" x="96" y="100" width="182" height="45"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="33"/>
+                                <state key="normal" title="Question">
+                                    <color key="titleColor" red="0.1176470667" green="0.082352943720000002" blue="0.043137256059999997" alpha="1" colorSpace="deviceRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="questionBtn:" destination="vfS-zq-mCo" eventType="touchUpInside" id="2bx-IX-Ohy"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ktU-dC-Gol">
+                                <rect key="frame" x="96" y="246" width="182" height="55"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="33"/>
+                                <state key="normal" title="Answer">
+                                    <color key="titleColor" red="0.1176470667" green="0.082352943720000002" blue="0.043137256059999997" alpha="1" colorSpace="deviceRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="answerBtn:" destination="vfS-zq-mCo" eventType="touchUpInside" id="5hN-d1-uq7"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cmZ-p3-fZh">
+                                <rect key="frame" x="67" y="157" width="240" height="81"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Apz-sA-tIK">
+                                <rect key="frame" x="53" y="293" width="291" height="81"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IDf-BW-4Ce">
+                                <rect key="frame" x="53" y="444" width="291" height="152"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="answerTextView" destination="Apz-sA-tIK" id="RSw-VC-Tx3"/>
+                        <outlet property="explanationTextView" destination="IDf-BW-4Ce" id="qIJ-f6-ao4"/>
+                        <outlet property="questionTextView" destination="cmZ-p3-fZh" id="655-N9-VxK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kB4-uK-1DC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-4129" y="-1017"/>
         </scene>
     </scenes>
     <resources>
