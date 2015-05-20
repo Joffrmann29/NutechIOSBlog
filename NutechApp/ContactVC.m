@@ -8,6 +8,7 @@
 
 #import "ContactVC.h"
 #import <MessageUI/MessageUI.h>
+#import "AppDelegate.h"
 
 @interface ContactVC ()
 
@@ -23,7 +24,37 @@
     self.messageTextView.layer.borderColor = [[UIColor lightGrayColor] CGColor];
     self.messageTextView.layer.cornerRadius = 8;
 
+    _sendLabel.lineBreakMode = NSLineBreakByWordWrapping;
+    _sendLabel.numberOfLines = 0;
+    self.scrollView.delegate = self;
+    AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
+    
+    self.scrollView.contentSize = CGSizeMake(self.view.frame.size.height, self.view.frame.size.height*1.1);
+    
+    if([[appDelegate platformString]isEqualToString:@"iPhone 5S"])
+    {
+        self.scrollView.contentSize = CGSizeMake(self.view.frame.size.height, self.view.frame.size.height*1.4);
+    }
+    
+    else if([[appDelegate platformString]isEqualToString:@"iPhone7,2"]){
+        self.scrollView.contentSize = CGSizeMake(self.view.frame.size.height, self.view.frame.size.height*1.1);
+    }
+    
+    else if([[appDelegate platformString]isEqualToString:@"iPhone 4S"])
+    {
+        self.scrollView.contentSize = CGSizeMake(self.view.frame.size.height, self.view.frame.size.height*1.8);
+    }
+    
 }
+
+- (void)scrollViewDidScroll:(UIScrollView *)sender {
+    if (sender.contentOffset.x != 0) {
+        CGPoint offset = sender.contentOffset;
+        offset.x = 0;
+        sender.contentOffset = offset;
+    }
+}
+
 -(void)viewWillDisappear:(BOOL)animated{
     self.navigationController.navigationBarHidden = YES;
 

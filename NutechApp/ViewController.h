@@ -7,20 +7,24 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <QuartzCore/QuartzCore.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController<UIScrollViewDelegate>
 
-- (IBAction)blogBtn:(id)sender;
-- (IBAction)tutorialBtn:(id)sender;
-- (IBAction)contentBtn:(id)sender;
-- (IBAction)aboutBtn:(id)sender;
-- (IBAction)quizBtn:(id)sender;
+//- (IBAction)blogBtn:(id)sender;
+//- (IBAction)tutorialBtn:(id)sender;
+//- (IBAction)contentBtn:(id)sender;
+//- (IBAction)aboutBtn:(id)sender;
+//- (IBAction)quizBtn:(id)sender;
 
-@property (weak, nonatomic) IBOutlet UIButton *blogButton;
-@property (weak, nonatomic) IBOutlet UIButton *tutorialButton;
-@property (weak, nonatomic) IBOutlet UIButton *contactButton;
-@property (weak, nonatomic) IBOutlet UIButton *aboutButton;
-@property (weak, nonatomic) IBOutlet UIButton *quizButton;
+@property (strong, nonatomic) UIButton *blogButton;
+@property (strong, nonatomic) UIButton *tutorialButton;
+@property (strong, nonatomic) UIButton *contactButton;
+@property (strong, nonatomic) UIButton *aboutButton;
+@property (strong, nonatomic) UIButton *quizButton;
+@property (strong, nonatomic) UIImageView *imgView;
+@property (strong, nonatomic) UIImageView *logoView;
+@property (strong, nonatomic) UIScrollView *scrollView;
 
 @end
 

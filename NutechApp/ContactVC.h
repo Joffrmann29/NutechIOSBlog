@@ -10,13 +10,13 @@
 #import <MessageUI/MessageUI.h>
 
 
-@interface ContactVC : UIViewController<MFMailComposeViewControllerDelegate>
+@interface ContactVC : UIViewController<MFMailComposeViewControllerDelegate, UIScrollViewDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *nameTF;
 @property (weak, nonatomic) IBOutlet UITextField *emailTF;
 @property (weak, nonatomic) IBOutlet UITextField *subjectTF;
 @property (weak, nonatomic) IBOutlet UITextView *messageTextView;
 @property (weak, nonatomic) IBOutlet UISwitch *sendToYourSelf;
-
-@property (weak, nonatomic) IBOutlet UIButton *sendButton;
+@property (strong, nonatomic) IBOutlet UILabel *sendLabel;
+@property (strong, nonatomic) IBOutlet UIScrollView *scrollView;
 - (IBAction)sendEmail:(id)sender;
 @end
